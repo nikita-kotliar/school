@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Favourite</title>
+    <script type="module" crossorigin src="/school/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/school/assets/vendor-ce9f25a7.js">
+    <link rel="modulepreload" crossorigin href="/school/assets/darkThemeBtn-994b8fa2.js">
+    <link rel="stylesheet" href="/school/assets/vendor-e5212ee8.css">
+    <link rel="stylesheet" href="/school/assets/darkThemeBtn-936c7fad.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container header-row">
+    <a aria-label="main" class="logo" href="./index.html">energy.flow</a>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a
+            aria-label="home"
+            class="nav-link active"
+            id="homeLink"
+            href="./index.html"
+            >Home</a
+          >
+        </li>
+        <li class="nav-list-item">
+          <a
+            aria-label="favorites"
+            class="nav-link"
+            id="favoritesLink"
+            href="./favourite.html"
+            >Favorites</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="buttons">
+      <div class="theme-checkbox">
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <label for="checkbox" class="label">
+          <svg width="28" height="28" class="fa-moon">
+            <use href="/school/assets/icon-c8fc18a4.svg#icon-moon"></use>
+          </svg>
+          <svg width="28" height="28" class="fa-sun">
+            <use href="/school/assets/icon-c8fc18a4.svg#icon-sun"></use>
+          </svg>
+          <span class="ball"></span>
+        </label>
+      </div>
+      <div class="theme-switch">
+        <input type="checkbox" class="checkbox" id="theme-checkbox" />
+        <label for="theme-checkbox" class="label">
+          <svg class="icon fa-sun">
+            <use href="/school/assets/icon-c8fc18a4.svg#icon-sun"></use>
+          </svg>
+          <svg class="icon fa-moon">
+            <use href="/school/assets/icon-c8fc18a4.svg#icon-moon"></use>
+          </svg>
+        </label>
+      </div>
+      <ul class="social-media-list">
+        <li>
+          <a
+            aria-label="social-media"
+            href="https://www.facebook.com/profile.php?id=100023634875368"
+            target="_blank"
+            class="social-media-link"
+          >
+            <svg width="28" height="28" class="social-media-icon">
+              <use href="/school/assets/icon-c8fc18a4.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="social-media"
+            href="https://www.instagram.com/kotliar_nikitaa/"
+            target="_blank"
+            class="social-media-link"
+          >
+            <svg width="28" height="28" class="social-media-icon">
+              <use href="/school/assets/icon-c8fc18a4.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="social-media"
+            href="https://www.youtube.com"
+            target="_blank"
+            class="social-media-link"
+          >
+            <svg width="28" height="28" class="social-media-icon">
+              <use href="/school/assets/icon-c8fc18a4.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <button class="open-mobile-menu-btn" type="button" name="menu">
+        <svg class="icon-mobile-nav" width="32" height="16">
+          <use href="/school/assets/icon-c8fc18a4.svg#icon-menu"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile-menu -->
+<div class="mobile-menu-wrapper">
+  <div class="mobile-menu">
+    <div class="mobile-menu-container">
+      <a aria-label="main" class="logo mobile-menu-logo" href="./index.html"
+        >energy.flow</a
+      >
+
+      <button class="close-mobile-menu-btn" type="button" name="close">
+        <svg class="icon-mobile-menu-nav" width="24" height="24">
+          <use href="/school/assets/icon-c8fc18a4.svg#icon-x"></use>
+        </svg>
+      </button>
+    </div>
+
+    <nav>
+      <ul class="mobile-nav-list">
+        <li>
+          <a
+            aria-label="home"
+            class="nav-link active"
+            id="mobileHomeLink"
+            href="./index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            aria-label="favorites"
+            class="nav-link"
+            id="mobileFavoritesLink"
+            href="./favourite.html"
+            >Favorites</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="mobile-social-media-list">
+      <li>
+        <a
+          aria-label="social-media"
+          href="https://www.facebook.com/profile.php?id=100023634875368"
+          target="_blank"
+          class="social-media-link"
+        >
+          <svg width="28" height="28" class="social-media-icon">
+            <use href="/school/assets/icon-c8fc18a4.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="social-media"
+          href="hhttps://www.instagram.com/kotliar_nikitaa/"
+          target="_blank"
+          class="social-media-link"
+        >
+          <svg width="28" height="28" class="social-media-icon">
+            <use href="/school/assets/icon-c8fc18a4.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="social-media"
+          href="https://www.youtube.com"
+          target="_blank"
+          class="social-media-link"
+        >
+          <svg width="28" height="28" class="social-media-icon">
+            <use href="/school/assets/icon-c8fc18a4.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <section class="quote-110">
+  <div class="quote-110-container">
+    <div class="quote-110-wrapper">
+      <p class="quote-title">Quote of the day</p>
+      <p class="quote-text">
+        A lot of times I find that people who are blessed with the most talent
+        don't ever develop that attitude, and the ones who aren't blessed in
+        that way are the most competitive and have the biggest heart.
+      </p>
+      <p class="quote-author">Tom Brady</p>
+      <span class="quote-icon">
+        <svg>
+          <use href="/school/assets/icon-c8fc18a4.svg#icon-man"></use>
+        </svg>
+      </span>
+      <svg class="quote-commas-icon">
+        <use href="/school/assets/icon-c8fc18a4.svg#icon-commas"></use>
+      </svg>
+    </div>
+    <img
+      class="quote-110-img"
+      src="/school/assets/quote-110-mobile-0c8c7b3b.png"
+      alt="Athletic girl"
+    />
+    <div class="min-110-card">
+      <svg class="quote-110-icon">
+        <use href="/school/assets/icon-c8fc18a4.svg#icon-dumbbell"></use>
+      </svg>
+      <p class="min-110-card-title">110 min</p>
+      <p class="min-110-card-text">Daily norm of sports</p>
+    </div>
+  </div>
+</section>
+
+    <section class="favourite_exercises section">
+  <div class="container">
+    <h2 class="section_title">Favourite</h2>
+    <div class="scrollbar_custom">
+      <ul class="fav_card_list"></ul>
+    </div>
+    <div class="no_cards_wrapper visually-hidden">
+      <img
+        load="lazy"
+        class="dumbbell_img"
+        srcset="data:image/png;base64,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 85w, /school/assets/dumbbell_mob@2x-6932085a.png 170w, data:image/png;base64,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 116w, /school/assets/dumbbell_tab@2x-b1e2f335.png 231w"
+        sizes="(min-width: 736px) 116px, 85px"
+        src="data:image/png;base64,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"
+        alt="dumbbell icon"
+        width="80"
+        height="52"
+      />
+      <p class="info">
+        It appears that you haven't added any exercises to your favorites yet.
+        To get started, you can add exercises that you like to your favorites
+        for easier access in the future.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <div class="exr-card-backdrop"></div>
+
+    <div class="backdrop">
+  <div class="backdrop-container">
+    <button name="close" id="form-close-btn" type="button">
+      <svg class="form-close-btn-icon" width="24" height="24">
+        <use href="/school/assets/icon-c8fc18a4.svg#icon-x"></use>
+      </svg>
+    </button>
+    <form class="backdrop-form">
+      <p class="backdrop-form-text">Rating</p>
+
+      <div class="rating-wrapper">
+        <p class="rating-star-value">0.0</p>
+        <svg class="rating-star-icons" width="24" height="24">
+          <use data-id="1" href="/school/assets/icon-c8fc18a4.svg#icon-star"></use>
+        </svg>
+        <svg class="rating-star-icons" width="24" height="24">
+          <use data-id="2" href="/school/assets/icon-c8fc18a4.svg#icon-star"></use>
+        </svg>
+        <svg class="rating-star-icons" width="24" height="24">
+          <use data-id="3" href="/school/assets/icon-c8fc18a4.svg#icon-star"></use>
+        </svg>
+        <svg class="rating-star-icons" width="24" height="24">
+          <use data-id="4" href="/school/assets/icon-c8fc18a4.svg#icon-star"></use>
+        </svg>
+        <svg class="rating-star-icons" width="24" height="24">
+          <use data-id="5" href="/school/assets/icon-c8fc18a4.svg#icon-star"></use>
+        </svg>
+      </div>
+      <input
+        type="email"
+        placeholder="Email"
+        pattern="^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$"
+        name="user-email"
+        id="user-email"
+        title="Enter your email"
+        required
+      />
+      <textarea
+        class="form-user-comment"
+        name="user-comment"
+        id="user-comment"
+        placeholder="Your comment"
+      ></textarea>
+      <button name="send" class="form-send-btn" type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+
+    
+    
+  </body>
+</html>

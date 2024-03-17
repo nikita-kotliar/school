@@ -14,7 +14,7 @@
   position: absolute;
 }
 
-.checkbox:checked + .label .ball {
+.theme-checkbox.moon .ball {
   transform: translateX(38px);
 }
 
@@ -55,12 +55,15 @@
 .fa-moon {
   opacity: 0;
 }
-
-.checkbox:checked + .label .fa-sun {
+.fa-sun {
   opacity: 0;
 }
 
-.checkbox:checked + .label .fa-moon {
+.theme-switch.sun .fa-sun {
+  opacity: 1;
+}
+
+.theme-switch.moon .fa-moon {
   opacity: 1;
 }
 
@@ -124,11 +127,10 @@
     border: 1px solid rgba(126, 132, 127, 0.2);
   }
 
-  .fa-moon {
+  .theme-checkbox.sun .fa-sun {
     opacity: 1;
   }
-
-  .checkbox:checked + .label .fa-sun {
+  .theme-checkbox.moon .fa-moon {
     opacity: 1;
   }
 }

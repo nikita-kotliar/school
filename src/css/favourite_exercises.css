@@ -4,6 +4,8 @@
   background-color: var(--white-color);
 }
 
+
+
 .favourite_exercises .container {
   min-height: 450px;
   background-color: var(--second-background);
@@ -104,7 +106,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .fav_card .icon_man {
@@ -139,6 +141,7 @@
   align-items: center;
   gap: 4px;
 }
+
 
 .fav_card .detail_item {
   color: var(--description-color);
@@ -196,6 +199,7 @@
   .scrollbar_custom::-webkit-scrollbar {
     width: 8px;
     background-color: var(--description-color);
+    border-radius: 10px;
   }
 
   .scrollbar_custom::-webkit-scrollbar-thumb {
@@ -264,4 +268,8 @@
   .fav_card_list .fav_card {
     height: 140px;
   }
+  .details_wrapper {
+  height: 18px;
+  overflow: auto;
+}
 }

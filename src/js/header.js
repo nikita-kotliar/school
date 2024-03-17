@@ -1,4 +1,3 @@
-//============================= MAIN-MENU-WORK =============================
 document.addEventListener('DOMContentLoaded', function () {
   let currentPage = window.location.href;
 
@@ -19,9 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mobHomeLink.classList.remove('active');
   }
 });
-//============================ /MAIN-MENU-WORK =============================
 
-//============================ BURGER-MENU-WORK ============================
 
 const openMenuButton = document.querySelector('.open-mobile-menu-btn');
 const closeMenuButton = document.querySelector('.close-mobile-menu-btn');
@@ -51,4 +48,3 @@ mobileMenu.addEventListener('animationend', event => {
     mobileMenu.classList.remove('mobile-menu-wrapper-anim-hide');
   }
 });
-//=========================== /BURGER-MENU-WORK ============================

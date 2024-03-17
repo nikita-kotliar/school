@@ -7,7 +7,6 @@ const backdrop = document.querySelector('.backdrop');
 const userEmail = document.querySelector('#user-email');
 const userComment = document.getElementById('user-comment');
 const formSendBtn = document.querySelector('.form-send-btn');
-// formSendBtn.disabled = true;
 
 formCloseBtn.addEventListener('click', () => {
   backdrop.classList.remove('is-open');

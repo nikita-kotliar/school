@@ -4,16 +4,13 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 import { postSubscriptions } from './api';
 
-// const form = document.querySelector('form');
 const email = document.querySelector('input[name=email]');
 const submitBtnFooter = document.querySelector('.footer-send-button');
 const expressionKey = 'feedback-form-state';
 
 
 
-// $('form input').on('keypress', function(e) {
-//   return e.which !== 13;
-// });
+
 
 function saveDataToLocalStorage() {
   const formData = {
@@ -78,66 +75,3 @@ function isValidEmail(email) {
   const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
   return emailRegex.test(email);
 }
-// form.addEventListener('submit', handleSubmit);
-
-// function handleSubmit(event) {
-//   event.preventDefault();
-
-//   if (!isValidEmail(email.value)) {
-//     iziToast.info({
-//       message: 'Please enter a valid email address',
-//     });
-//     return;
-//   }
-
-//   // const formData = {
-//   //   email: email.value,
-//   // };
-
-//   // fetch('https://energyflow.b.goit.study/api/subscription', {
-//   //   method: 'POST',
-//   //   headers: {
-//   //     'Content-Type': 'application/json',
-//   //   },
-//   //   body: JSON.stringify(formData),
-//   // })
-//   postSubscriptions(email.value)
-//   .then(data => {
-//     console.log('Success:', data);
-//     iziToast.success({
-//       title: 'Success',
-//       message: 'Welcome to energy.flow world!',
-//     })
-//     .catch(error => {
-//       if (error.status === 409) {
-//         iziToast.error({
-//           title: 'Error',
-//           message:
-//           'Email already exists'
-//         });
-//       }
-//       else{
-//         iziToast.error({
-//           title: 'Error',
-//           message:
-//           'Something went wrong! Please try again later'
-//         });
-//       }
-//     })
-    
-
-    //   localStorage.removeItem(expressionKey);
-    //   email.value = '';
-    // })
-    // .catch(error => {
-    //   console.error('Error:', error);
-    //   if (error.message !== 'Email already exists') {
-    //     iziToast.error({
-    //       title: 'Error',
-    //       message: 'Something went wrong! Please try again later',
-    //     });
-      // }
-    // });
-// }
-
-

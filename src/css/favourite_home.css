@@ -62,7 +62,7 @@
 /* Tablet */
 @media screen and (min-width: 768px) {
   .quote-110 {
-    margin-top: 180px;
+    margin-top: 140px;
   }
 
   .quote-110-container {
@@ -98,7 +98,7 @@
 /* Desktop */
 @media screen and (min-width: 1440px) {
   .quote-110 {
-    margin-top: 156px;
+    margin-top: 140px;
   }
 
   .quote-110-container {

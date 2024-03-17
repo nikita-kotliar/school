@@ -1,4 +1,4 @@
- import handlerStartBtn from './exercises_card.js';
+import handlerStartBtn from './exercises_card.js';
 
 import {
   getFav,
@@ -11,57 +11,6 @@ const refs = {
   cardSet: document.querySelector('.fav_card_list'),
   noCards: document.querySelector('.no_cards_wrapper'),
 };
-
-// emulation
-
-// const demoObj1 = {
-//   name: 'Air bike',
-//   excDetails: {
-//     burnedCalories: 13,
-//     bodyPart: 'Waist',
-//     target: 'Biceps',
-//   },
-//   _id: 1,
-//   favourite: true,
-// };
-
-// const demoObj2 = {
-//   name: 'Stationary bike walk',
-//   excDetails: {
-//     burnedCalories: 116,
-//     bodyPart: 'Cardio',
-//     target: 'Cardiovascular system',
-//   },
-//   _id: 2,
-//   favourite: false,
-// };
-
-// const demoObj2_5 = {
-//   name: 'Stationary bike walk',
-//   excDetails: {
-//     burnedCalories: 116,
-//     bodyPart: 'Cardio',
-//     target: 'Cardiovascular system',
-//   },
-//   _id: 2,
-//   favourite: false,
-// };
-
-// const demoObj3 = {
-//   name: 'mcChicken burger',
-//   excDetails: {
-//     burnedCalories: -150,
-//     bodyPart: 'Tummy',
-//     target: 'Hunger',
-//   },
-//   _id: 3,
-// };
-
-// const fav = [demoObj1, demoObj2, demoObj2_5, demoObj3];
-
-// setFav(fav);
-
-// render logic
 
 const uniqueIdFilter = arr => {
   const uniqueIds = new Set();
@@ -79,7 +28,7 @@ const renderCards = arr => {
   const uniqueIdOnlyArray = uniqueIdFilter(arr);
 
   const markup = uniqueIdOnlyArray.map(
-    ({ name, _id, burnedCalories, bodyPart, target } ) => {
+    ({ name, _id, burnedCalories, bodyPart, target }) => {
       return `<li data-id-card="${_id}" data-component="fav_card" class="list_item">
           <div class="fav_card">
             <div class="actions_wrapper">
@@ -87,14 +36,14 @@ const renderCards = arr => {
                 <span class="workout">workout</span>
                 <button name="trash" data-id-del-btn="${_id}" data-action="delete_fav_card" class="btn">
                   <svg width="16" height="16" aria-label="trash icon">
-                    <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-trash"></use>
+                    <use href="./images/icon.svg#icon-trash"></use>
                   </svg>
                 </button>
               </div>
               <button name="start" data-id-start-btn="${_id}" data-action="start_exercise_btn" class="btn">
                 <span class="start">start</span>
                 <svg width="16" height="16" aria-label="arrow icon">
-                  <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-arrow"></use>
+                  <use href="./images/icon.svg#icon-arrow"></use>
                 </svg>
               </button>
             </div>
@@ -102,7 +51,7 @@ const renderCards = arr => {
             <div class="inner_wrapper">
               <div class="icon_man">
                 <svg width="16" height="16">
-                  <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-man"></use>
+                  <use href="./images/icon.svg#icon-man"></use>
                 </svg>
               </div>
               <p class="exercise_name">${name}</p>
@@ -142,7 +91,6 @@ const renderCards = arr => {
   refs.cardSet.innerHTML = markup.join('');
 };
 
-// delete and start card logic
 
 const onClick = e => {
   const startBtn = e.target.closest('[data-action="start_exercise_btn"]');
@@ -167,22 +115,20 @@ const onClick = e => {
   }
 };
 
-// check storage logic
 
 export const checkStorage = () => {
-
-  if(document.querySelector(".favourite_exercises") !== null){
+  if (document.querySelector('.favourite_exercises') !== null) {
     const isFavsExist = getFav(LS_FAV).length !== 0;
-  if (!isFavsExist) {
-    refs.noCards.classList.remove('visually-hidden');
-    refs.cardSet.classList.add('visually-hidden');
-  } else {
-    refs.noCards.classList.add('visually-hidden');
-    refs.cardSet.classList.remove('visually-hidden');
-    renderCards(getFav(LS_FAV));
-    refs.cardSet.addEventListener('click', onClick);
+    if (!isFavsExist) {
+      refs.noCards.classList.remove('visually-hidden');
+      refs.cardSet.classList.add('visually-hidden');
+    } else {
+      refs.noCards.classList.add('visually-hidden');
+      refs.cardSet.classList.remove('visually-hidden');
+      renderCards(getFav(LS_FAV));
+      refs.cardSet.addEventListener('click', onClick);
+    }
   }
-}
 };
 
 checkStorage();

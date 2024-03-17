@@ -9,7 +9,6 @@ export const getFav = key => {
     return JSON.parse(localStorage.getItem(key));
   } catch (err) {
     console.log(err.message);
-    //   add notification here in future instead of log
   }
 };
 

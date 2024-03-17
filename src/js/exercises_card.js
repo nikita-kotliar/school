@@ -36,7 +36,7 @@ export default function handlerStartBtn(
   if (isFavourite === true) {
     document.querySelector('.add-favourite-btn').innerHTML = `Remove from
           <svg class="heart-icon">
-            <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-heart"></use>
+            <use href="./images/icon.svg#icon-heart"></use>
           </svg>`;
   }
 }
@@ -46,7 +46,7 @@ function renderModal(data, isFavouritePage) {
     <div class="exr-card-cont">
       <button name="close" id="close-card" type="button" class="close-card-button">
       <svg class="close-card-icon">
-        <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-x"></use>
+        <use href="./images/icon.svg#icon-x"></use>
       </svg>
     </button>
     <img src="${data.gifUrl}" alt="example-img" class="exr-image" />
@@ -59,27 +59,27 @@ function renderModal(data, isFavouritePage) {
           </li>
           <li>
             <svg class="star-rating-icon">
-              <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-star"></use>
+              <use href="./images/icon.svg#icon-star"></use>
             </svg>
           </li>
           <li>
             <svg class="star-rating-icon">
-              <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-star"></use>
+              <use href="./images/icon.svg#icon-star"></use>
             </svg>
           </li>
           <li>
             <svg class="star-rating-icon">
-              <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-star"></use>
+              <use href="./images/icon.svg#icon-star"></use>
             </svg>
           </li>
           <li>
             <svg class="star-rating-icon">
-              <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-star"></use>
+              <use href="./images/icon.svg#icon-star"></use>
             </svg>
           </li>
           <li>
             <svg class="star-rating-icon">
-              <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-star"></use>
+              <use href="./images/icon.svg#icon-star"></use>
             </svg>
           </li>
         </ul>
@@ -119,7 +119,7 @@ function renderModal(data, isFavouritePage) {
         <button name="add-favorurite" class="add-favourite-btn">
           Add to favourites
           <svg class="heart-icon">
-            <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-heart"></use>
+            <use href="./images/icon.svg#icon-heart"></use>
           </svg>
         </button>
         <button name="rating" class="give-rating-btn">Give a rating</button>
@@ -140,14 +140,14 @@ function renderModal(data, isFavouritePage) {
       localStorageLogic.setFav(savedExercises);
       addFavBtn.innerHTML = `Remove from
           <svg class="heart-icon">
-            <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-heart"></use>
+            <use href="./images/icon.svg#icon-heart"></use>
           </svg>`;
       isFavourite = true;
     } else {
       localStorageLogic.removeFromFav(data._id);
       addFavBtn.innerHTML = `Add to favourite
           <svg class="heart-icon">
-            <use href="/energy_flow_project_06/assets/icon-c8fc18a4.svg#icon-heart"></use>
+            <use href="./images/icon.svg#icon-heart"></use>
           </svg>`;
       isFavourite = false;
     }
@@ -159,12 +159,12 @@ function renderModal(data, isFavouritePage) {
     document.body.classList.remove('not-scrollable');
   });
 
-  cardBackdrop.addEventListener('click', (event) => {
-    if (event.target === cardBackdrop){
-    cardBackdrop.classList.remove('card-is-open');
-    document.body.classList.remove('not-scrollable');
-  }
-});
+  cardBackdrop.addEventListener('click', event => {
+    if (event.target === cardBackdrop) {
+      cardBackdrop.classList.remove('card-is-open');
+      document.body.classList.remove('not-scrollable');
+    }
+  });
 
   document.querySelector('.give-rating-btn').addEventListener('click', () => {
     cardBackdrop.classList.remove('card-is-open');

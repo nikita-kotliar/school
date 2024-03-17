@@ -1,4 +1,3 @@
-// scrolling for top
 
 const scroller = document.getElementById('progress-scroll');
 
@@ -11,7 +10,6 @@ if (scroller) {
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  // Scroll back to top
 
   const progressPath = document.querySelector('.progress-wrap path');
 
